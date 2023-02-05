@@ -1,0 +1,17 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 6em;
+    padding: 0.5em;
+    font-size: 1.5rem;
+    line-height: 1;
+    // border: 1px solid #607d8b;
+    border-radius: 0.5em;
+    color: var(--lighten-text-color);
+    background-color: var(--accent-color);
+
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+  }

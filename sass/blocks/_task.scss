@@ -1,0 +1,70 @@
+.tasks {
+    padding: 1em 0;
+}
+
+.empty-list {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        padding-right: 1em;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        color: var(--lighten-text-color);
+    }
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--lighten-bg-color);
+    padding: 1em;
+    border-radius: 1em;
+
+    &__text {
+        flex: 1 1 auto;
+        margin-right: 1em;
+        font-size: 1.5rem;
+        color: var(--dark-text-color);
+
+        // @media (max-width: 1100px) {
+        //     font-size: 1rem;
+        // }
+    }
+
+    &__buttons {
+        display: flex;
+        // margin-left: auto;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    @media (max-width: 1100px) {
+        flex-direction: column;
+        align-items: start;
+
+        &__text {
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.tasks__list {
+    margin-bottom: 1em;
+}
+
+.none {
+    display: none !important;
+  }
+  
+  .btn-action img {
+    pointer-events: none;
+  }
+  
+  .task-item__text--done {
+    background-color: #b3e5fc;
+  }

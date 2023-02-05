@@ -1,0 +1,232 @@
+:root {
+    
+    --font-family: "Jost", sans-serif;
+    --content-width: 1170px;
+    --content-large-width: 1400px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    --container-large-width: calc(var(--content-large-width) + (var(--container-offset) * 2));
+  
+    --brand-color: #009EFF;
+    --brand-color-hover: #0591E7;
+  
+    --darken-text-color: #000;
+    --dark-text-color: #323941;
+    --light-text-color: #999999;
+    --lighten-text-color: #EEE;
+  
+    --main-bg-color: #FFF;
+    --dark-bg-color: #323941;
+    --light-bg-color: #C4C4C4;
+    --lighten-bg-color: #EEE;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('LatoRegular'),
+    url('../fonts/Lato-Regular.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+
+/* common specification */
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: var(--cornflower-blue);
+}
+
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+
+:root {
+    --color-white: #ffffff;
+    --cornflower-blue: #37474f;
+}
+html {
+    box-sizing: border-box;
+    font-size: 20px;
+
+    @media (max-width: 1200px) {
+      font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1200 - 320)));
+    }
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  .page {
+    height: 100%;
+    font-family: var(--font-family, sans-serif);
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  .page__body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100%;
+    font-size: 16px;
+  }
+  
+  img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-weight: inherit;
+      font-size: inherit;
+  }
+  
+  .site-container {
+    overflow: hidden;
+  }
+  
+  /* .is-hidden {
+    display: none !important;
+  } */
+  
+  .btn-reset {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .input-reset {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+  
+  }
+  
+  /* .visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+  } */
+  
+  .container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+  }
+  
+  /* .container-large {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-large-width);
+  } */
+  
+  /* .js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+  } */
+  
+  /* .centered {
+    text-align: center;
+  } */
+  
+  /* .dis-scroll {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    overscroll-behavior: none;
+  } */
+  
+  /* .page--ios .dis-scroll {
+    position: relative;
+  } */
+
+.header {
+    padding: 2em;
+}
+
+.none {
+    display: none !important;
+  }
+  
+  .btn-action img {
+    pointer-events: none;
+  }
+  
+  .task-item__text--done {
+    background-color: rgb(104, 244, 130);
+  }
+
+/* **************************************************************************************** */
+/* li - task item */
+/* **************************************************************************************** */
+
+
+.list-group-item {
+    font-size: 2rem;
+    color: #cfd8dc;
+    display: flex;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #455a64;
+    margin-bottom: 1em;
+}
+
+.task-item__buttons {
+    margin-left: auto;
+    /* display: flex; */
+}
+
+.task-item {
+  /* display: block; */
+}
+
+.btn-action {
+    /* border-radius: 50%; */
+  display: inline;
+  /* min-width: 100px; */
+}
+
+.list {
+  list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.task-title {
+  display: block;
+}
