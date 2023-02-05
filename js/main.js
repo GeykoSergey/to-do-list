@@ -136,7 +136,7 @@
       if (tasks.length === 0) {
         const emptyListHTML = `
           <li class="empty-list" id="emptyList">
-            <img class="empty-list__img" src="../img/leaf.svg">
+            <img class="empty-list__img" src="../img/leaf.svg" width="48">
             <div class="empty-list__title">Список дел пуст</div>
           </li>
         `;
