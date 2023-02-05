@@ -137,7 +137,7 @@
         const emptyListHTML = `
           <li class="empty-list" id="emptyList">
      
-            <div class="empty-list__title">Список дел пуст</div>
+            <div class="empty-list__title">To-do list is empty<div>
           </li>
         `;
         
