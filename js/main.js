@@ -136,8 +136,13 @@
       if (tasks.length === 0) {
         const emptyListHTML = `
           <li class="empty-list" id="emptyList">
+<<<<<<< HEAD
             <img class="empty-list__img" src=".>
             <div class="empty-list__title">Список дел пуст</div>
+=======
+     
+            <div class="empty-list__title">To-do list is empty<div>
+>>>>>>> 745a3d3e67bdb42a3f5c9e0768b39c38b1c107f2
           </li>
         `;
         
