@@ -2,6 +2,10 @@
     const form = document.querySelector('#form');
     const taskInput = document.querySelector('#taskInput');
     const taskList = document.querySelector('#tasksList');
+
+    // const formEdit = document.querySelector('#form-edit');
+    // const inputEdit =document.querySelector('#taskInputEdit');
+    // const btnEdit = document.querySelector('.btn-edit');
     
     // массив для задач, храниться в LS
     let tasks = [];
@@ -26,7 +30,13 @@
     taskList.addEventListener('click', deleteTask);
   
     taskList.addEventListener('click', doneTask);
+
+    taskList.addEventListener('click', editTask);
   
+
+    // =======================================================================
+    // Добавить задачу
+    // =======================================================================
     function addTask(event) {
       event.preventDefault();
   
@@ -98,7 +108,10 @@
   
       }
     }
-  
+
+    // =======================================================================
+    // Задача выполнена
+    // =======================================================================
     function doneTask(event) {
       // проверяем, что клик был по кнопке "задача выполнена"
       // находим родительскую ноду
@@ -129,7 +142,53 @@
         taskTitle.classList.toggle('task-item__text--done');
       }
     }
-  
+
+    // =======================================================================
+    // Редактирование задачи
+    // =======================================================================
+    function editTask(event) {
+      if(event.target.dataset.action === "edit") {
+
+        const parentNode = event.target.closest('.task-item');
+        const id = Number(parentNode.id);
+
+        const task = tasks.find(function(task) {
+          if(task.id === id) {
+            return true;
+          }
+        });
+
+        const editTaskModalHtml = `
+          <form class="form task__form" id="form-edit">
+            <label class="form__label">
+              <input class="form__input" type="text" name="task" id="taskInputEdit" placeholder="Enter the task text" required>
+            </label>
+            <button class="btn-reset btn btn--action btn-edit" type="submit">
+              Save changes
+            </button>
+          </form>        
+        `;
+
+        taskList.insertAdjacentHTML('beforeend', editTaskModalHtml);
+
+        const formEdit = document.querySelector('#form-edit');
+        const inputEdit = document.querySelector('#taskInputEdit');
+        const btnEdit = document.querySelector('.btn-edit');
+
+        inputEdit.value = task.text;
+
+        btnEdit.addEventListener('click', function(event) {
+          event.preventDefault();
+          task.text = inputEdit.value;
+          console.log('!!!');
+          saveToLocalStorage();
+          let editTaskText = parentNode.querySelector('.task-item__text');
+          editTaskText.innerText = task.text;
+          formEdit.remove();
+        });
+      }      
+    }
+
     // проверка наличия задач и отображение "Список дел пуст"
     // checkEmptyList() запускается каждый раз, при изменении данных
     function checkEmptyList() {
@@ -170,6 +229,9 @@
             </button>
             <button class="btn-reset btn btn--action" type="button" data-action="delete">
                 Delete
+            </button>
+            <button class="btn-reset btn btn--action" type="button" data-action="edit">
+                Edit
             </button>
             </div>
           </div>
