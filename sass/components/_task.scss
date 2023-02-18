@@ -1,3 +1,7 @@
+.main {
+    padding-top: 15em;
+}
+
 .tasks {
     padding: 1em 0;
 }
@@ -19,17 +23,17 @@
 .task-item {
     display: flex;
     align-items: center;
-    background-color: var(--dark-bg-color);
+    background-color: var(--lighten-bg-color);
     padding: 1.5em;
     border-radius: 1em;
-    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.1),
-                inset 5px 5px 15px rgba(0, 0, 0, 1);
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.1),
+                 5px 5px 15px rgba(0, 0, 0, 1);
 
     &__text {
         flex: 1 1 auto;
         margin-right: 1em;
-        font-size: 1.5rem;
-        color: var(--accent-color);
+        font-size: 1.75rem;
+        color: var(--dark-text-color);
 
         // @media (max-width: 1100px) {
         //     font-size: 1rem;

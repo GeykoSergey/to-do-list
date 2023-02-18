@@ -1,9 +1,9 @@
-@import "./base/reset";
-@import "./base/font";
-@import "./base/vars";
-@import "./base/base";
+@import "./vars";
+@import "./font";
+@import "./settings";
 
-@import "./blocks/btn";
-@import "./blocks/header";
-@import "./blocks/task";
-@import "./blocks/form";
+@import "./components/btn";
+@import "./components/header";
+@import "./components/task";
+@import "./components/modal";
+@import "./components/form";

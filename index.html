@@ -1,86 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <div class="wrapper">
+  <div class="wrapper">
 
-        <header class="header">
-            <div class="container">
-                <a class="logo header__logo">To Do List</a>
-            </div>
-        </header>
+    <header class="header">
+      <div class="container header__container">
 
-        <main class="main">
-            <section class="tasks">
-                <div class="container">
+        <a class="logo header__logo">To Do List</a>
 
-                    <ul class="list-reset tasks__list" id="tasksList">
-                        <!-- <li class="empty-list" id="emptyList">
-                            <img class="empty-list__img" src="../img/leaf.svg" alt="Empty" width="48">
-                            <div class="empty-list__title">Список дел пуст</div>
-                        </li> -->
-                        <!-- <li class="task-item">
-                            <div class="task-item__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit veritatis voluptates ipsum maiores perferendis itaque.</div>
-                            <div class="task-item__buttons">
-                                <button class="btn-reset btn btn--action" type="button" data-action="done">
-                                    <img src="../img/tick.svg" alt="Done" width="18" height="18">
-                                    Done
-                                </button>
-                                <button class="btn-reset btn btn--action" type="button" data-action="delete">
-                                    <img src="../img/cross.svg" alt="Done" width="18" height="18">
-                                    Delete
-                                </button>
-                            </div>
-                        </li> -->
-                    </ul>
-
-                    <div class="card bg-light">
-                        <div class="card-body">
-                            <form class="form task__form" id="form">
-
-                                <label class="form__label">
-                                    <input class="form__input" type="text" name="task" id="taskInput" placeholder="Enter the task text" required>
-                                </label>
-
-                                <button class="btn-reset btn btn--action" type="submit">
-                                    Add Task
-                                </button>
-
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-        </main>
-
-        <!-- <div class="container">
-            <form class="form task__form" id="form-edit">
-
-                <label class="form__label">
-                    <input class="form__input" type="text" name="task" id="taskInputEdit" placeholder="Enter the task text" required>
-                </label>
-
-                <button class="btn-reset btn btn--action btn-edit" type="submit">
-                    Save changes
-                </button>
-
+        <div class="card bg-light">
+          <div class="card-body">
+            <form class="form task__form" id="form">
+  
+              <label class="form__label">
+                <input class="input-reset form__input" type="text" name="task" id="taskInput" placeholder="Enter the task text" required>
+              </label>
+  
+              <button class="btn-reset btn btn--action" type="submit">
+                Add Task
+              </button>
+  
             </form>
-        </div> -->
+          </div>
+        </div>
 
-        <footer class="footer">
-            <div class="container">
-                footer    
-            </div>
-        </footer>
+      </div>
 
-    </div>
-    <script type="module" src="./js/main.js"></script> 
+    </header>
+
+    <main class="main">
+      <section class="tasks">
+        <div class="container">
+
+          <ul class="list-reset tasks__list" id="tasksList">
+            <!-- <li class="empty-list" id="emptyList">
+              <img class="empty-list__img" src="../img/leaf.svg" alt="Empty" width="48">
+              <div class="empty-list__title">Список дел пуст</div>
+            </li> -->
+            <!-- <li class="task-item">
+              <div class="task-item__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit veritatis voluptates ipsum maiores perferendis itaque.</div>
+              <div class="task-item__buttons">
+                <button class="btn-reset btn btn--action" type="button" data-action="done">
+                  <img src="../img/tick.svg" alt="Done" width="18" height="18">
+                  Done
+                </button>
+                <button class="btn-reset btn btn--action" type="button" data-action="delete">
+                  <img src="../img/cross.svg" alt="Done" width="18" height="18">
+                  Delete
+                </button>
+              </div>
+            </li> -->
+          </ul>
+
+          </div>
+      </section>
+    </main>
+
+    <!-- <div class="container">
+      <form class="form task__form" id="form-edit">
+
+        <label class="form__label">
+          <input class="form__input" type="text" name="task" id="taskInputEdit" placeholder="Enter the task text" required>
+        </label>
+
+        <button class="btn-reset btn btn--action btn-edit" type="submit">
+          Save changes
+        </button>
+
+      </form>
+    </div> -->
+
+    <!-- <footer class="footer">
+      <div class="container">
+        footer    
+      </div>
+    </footer> -->
+
+  </div>
+
+  <script type="module" src="./js/main.js"></script> 
 </body>
 </html>
