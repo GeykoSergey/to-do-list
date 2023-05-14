@@ -1,9 +1,9 @@
 .header {
-    padding: 1rem;
+    // padding: 1rem;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--lighten-text-color);
-    background-color: var(--dark-bg-color);
+    // color: var(--lighten-text-color);
+    // background-color: var(--dark-bg-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -12,11 +12,22 @@
     &__logo {
     }
 
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+
+    }
+
     // &__container {
     //     display: flex;
     //     align-items: center;
     // }
 }
+
+
 .container {
 }
 

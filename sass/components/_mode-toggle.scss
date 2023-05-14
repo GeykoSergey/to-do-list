@@ -1,0 +1,69 @@
+.toggle {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  height: 60px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.toggle .material-symbols-outlined {
+  width: 50%;
+  line-height: 60px;
+  text-align: center;
+  z-index: 10;
+}
+
+.toggle .ball {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  margin: 7.5px;
+  border-radius: 50%;
+}
+
+.light {
+  background-color: var(--lighten-bg-color);
+}
+
+.light .toggle {
+  background: linear-gradient(145deg, #e1e1e1, #fff);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.1),
+              5px 5px 15px rgba(0, 0, 0, 1);
+}
+
+.light .toggle .sun {
+  color: var(--lighten-text-color);
+}
+
+.light .toggle .ball {
+  background: var(--dark-text-color);
+}
+
+.dark {
+  background-color: var(--dark-bg-color);
+}
+
+.dark .toggle {
+  background: var(--dark-bg-color);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.1),
+              5px 5px 15px rgba(0, 0, 0, 1);
+}
+
+.dark .toggle .moon {
+  color: var(--dark-text-colorr);
+}
+
+.dark .toggle .sun {
+  color: var(--lighten-text-color);
+}
+
+.dark .toggle .ball {
+  background: var(--lighten-text-color);
+  transform: translateX(60px);
+}
+
+.custom-checkbox {
+  display: none;
+}

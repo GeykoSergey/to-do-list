@@ -1,76 +1,77 @@
 .main {
-    padding-top: 15em;
+  padding-top: 17em;
 }
 
 .tasks {
-    padding: 1em 0;
+  padding: 1em 0;
 }
 
 .empty-list {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    &__img {
-        padding-right: 1em;
-    }
+  &__img {
+    padding-right: 1em;
+  }
 
-    &__title {
-        font-size: 1.5rem;
-        color: #fff;
-    }
+  &__title {
+    font-size: 1.5rem;
+    color: #fff;
+  }
 }
 
 .task-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--lighten-bg-color);
+  padding: 1.5em;
+  border-radius: 1em;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.1),
+              5px 5px 15px rgba(0, 0, 0, 1);
+
+  &__text {
+    flex: 1 1 auto;
+    margin-right: 1em;
+    font-size: 1.75rem;
+    color: var(--dark-text-color);
+    max-width: 800px;
+
+    // @media (max-width: 1100px) {
+    //     font-size: 1rem;
+    // }
+  }
+
+  &__buttons {
     display: flex;
-    align-items: center;
-    background-color: var(--lighten-bg-color);
-    padding: 1.5em;
-    border-radius: 1em;
-    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.1),
-                 5px 5px 15px rgba(0, 0, 0, 1);
+    // margin-left: auto;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2em;
+  }
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    align-items: start;
 
     &__text {
-        flex: 1 1 auto;
-        margin-right: 1em;
-        font-size: 1.75rem;
-        color: var(--dark-text-color);
-
-        // @media (max-width: 1100px) {
-        //     font-size: 1rem;
-        // }
+      margin-bottom: 1em;
     }
-
-    &__buttons {
-        display: flex;
-        // margin-left: auto;
-    }
-
-    &:not(:last-child) {
-        margin-bottom: 2em;
-    }
-
-    @media (max-width: 1100px) {
-        flex-direction: column;
-        align-items: start;
-
-        &__text {
-            margin-bottom: 1em;
-        }
-    }
+  }
 }
 
 .tasks__list {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .none {
-    display: none !important;
+  display: none !important;
   }
   
-  .btn-action img {
-    pointer-events: none;
-  }
+.btn-action img {
+  pointer-events: none;
+}
   
-  .task-item__text--done {
-    background-color: #b3e5fc;
-  }
+.task-item__text--done {
+  background-color: #b3e5fc;
+}

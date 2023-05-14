@@ -46,6 +46,7 @@ function addTask(event) {
   // обьект, который будет описывать задачу
   const newTask = {
     id: Date.now(),
+    // dateCreate: new Date(),
     text: taskText,
     done: false,
   }
@@ -163,7 +164,7 @@ function editTask(event) {
         <div class="modal__content">
           <form class="form task__form" id="form-edit">
             <label class="form__label">
-              <input class="input-reset form__input" type="text" name="task" id="taskInputEdit" placeholder="Enter the task text" required>
+              <textarea class="input-reset form__input" type="text" name="task" id="taskInputEdit" placeholder="Enter the task text" required rows="10" cols="33"></textarea>
             </label>
             <button class="btn-reset btn btn--action btn-edit" type="submit">
               Save changes
@@ -188,6 +189,9 @@ function editTask(event) {
       saveToLocalStorage();
       let editTaskText = parentNode.querySelector('.task-item__text');
       editTaskText.innerText = task.text;
+      // let editTaskDate = parentNode.querySelector('.task-item__date-edit');
+      // editTaskDate.innerText = new Date();
+      
       modalEdit.remove();
     });
   }      
@@ -247,3 +251,13 @@ function renderTask(task) {
   // Добавляем задачу на страницу
   taskList.insertAdjacentHTML('beforeend', taskHtml);
 }
+
+
+
+
+const body = document.querySelector('body');
+const toggle = document.querySelector('#toggle');
+
+toggle.addEventListener('change', () => {
+  body.classList.toggle('dark');
+});
